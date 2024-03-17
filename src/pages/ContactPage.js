@@ -1,4 +1,52 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  padding: 20px;
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top:50px;
+`;
+
+const Form = styled.form`
+  max-width: 400px;
+  margin: 0 auto;
+`;
+
+const FormGroup = styled.div`
+  margin-bottom: 20px;
+`;
+
+const Label = styled.label`
+  display: block;
+  margin-bottom: 5px;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const TextArea = styled.textarea`
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -15,18 +63,25 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform validation checks here
-    // For simplicity, we're assuming all fields are valid
+
     console.log(formData);
+
+    // Clear input fields
+    setFormData({
+      fullName: '',
+      subject: '',
+      email: '',
+      body: ''
+    });
   };
 
   return (
-    <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="fullName">Full Name:</label>
-          <input
+    <Container>
+      <Title>Contact Us</Title>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label htmlFor="fullName">Full Name:</Label>
+          <Input
             type="text"
             id="fullName"
             name="fullName"
@@ -35,10 +90,10 @@ const ContactPage = () => {
             required
             minLength={3}
           />
-        </div>
-        <div>
-          <label htmlFor="subject">Subject:</label>
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="subject">Subject:</Label>
+          <Input
             type="text"
             id="subject"
             name="subject"
@@ -47,10 +102,10 @@ const ContactPage = () => {
             required
             minLength={3}
           />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="email">Email:</Label>
+          <Input
             type="email"
             id="email"
             name="email"
@@ -58,10 +113,10 @@ const ContactPage = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
-          <label htmlFor="body">Body:</label>
-          <textarea
+        </FormGroup>
+        <FormGroup>
+          <Label htmlFor="body">Body:</Label>
+          <TextArea
             id="body"
             name="body"
             value={formData.body}
@@ -69,10 +124,10 @@ const ContactPage = () => {
             required
             minLength={3}
           />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+        </FormGroup>
+        <Button type="submit">Submit</Button>
+      </Form>
+    </Container>
   );
 }
 

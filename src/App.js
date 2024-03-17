@@ -6,8 +6,8 @@ import ContactPage from './pages/ContactPage';
 import ProductPage from './pages/ProductPage'; 
 import CheckoutPage from './pages/CheckoutPage';
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
-import Layout from './components/Layout'; // Import Layout component
-import CartIcon from './components/CartIcon'; // Import CartIcon component
+import Layout from './components/Layout';
+import CartIcon from './components/CartIcon';
 
 function App() {
   const [cart, setCart] = useState([]);
