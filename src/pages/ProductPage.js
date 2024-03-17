@@ -65,7 +65,7 @@ const ProductPage = ({ addToCart }) => {
       try {
         const response = await axios.get(`https://v2.api.noroff.dev/online-shop/${productId}`);
         const productData = response.data.data;
-        console.log('Product Data:', productData);
+
         setProduct(productData);
         setLoading(false);
       } catch (error) {

@@ -59,7 +59,6 @@ const HomePage = () => {
       setProducts(response.data.data);
       setFilteredProducts(response.data.data);
       setLoading(false);
-      console.log('List of products:', response.data.data);
     } catch (error) {
       console.error('Error fetching products:', error);
       setLoading(false);

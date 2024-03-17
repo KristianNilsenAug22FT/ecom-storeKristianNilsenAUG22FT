@@ -14,7 +14,7 @@ function App() {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    console.log('Product added to cart:', product);
+
   };
 
   const removeFromCart = (productId) => {
