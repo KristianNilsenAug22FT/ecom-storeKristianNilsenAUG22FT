@@ -10,8 +10,8 @@ const Title = styled.h1`
   margin-bottom: 20px;
   margin-top: 50px;
   text-align: center;
-  color: #493A84; /* Set the title color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+  color: #493A84;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const Form = styled.form`

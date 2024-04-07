@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import CartSvg from '../img/cart.svg'; // Import the cart icon
-import CartIcon from './CartIcon'; // Import the CartIcon component
+import CartSvg from '../img/cart.svg';
+import CartIcon from './CartIcon';
 
 const MobileNavToggle = styled.div`
   display: block;
@@ -37,10 +37,10 @@ const Navbar = styled.nav`
     li a {
       color: white;
       text-decoration: none;
-      transition: color 0.3s; /* Add transition for color change */
+      transition: color 0.3s;
       
       &:hover {
-        color: #ff6600; /* Change color on hover */
+        color: #ff6600;
       }
     }
   }
@@ -76,10 +76,10 @@ const DropdownContent = styled.div.attrs(props => ({
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
-    transition: color 0.3s; /* Add transition for color change */
+    transition: color 0.3s;
 
     &:hover {
-      color: #ff6600; /* Change color on hover */
+      color: #ff6600;
     }
   }
 `;

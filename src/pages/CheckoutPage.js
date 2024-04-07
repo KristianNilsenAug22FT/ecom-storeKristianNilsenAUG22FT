@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 20px;
-  max-width: 600px; /* Set the maximum width */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 const Title = styled.h1`

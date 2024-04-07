@@ -13,16 +13,16 @@ const Title = styled.h1`
   margin-bottom: 20px;
   margin-top: 50px;
   text-align: center;
-  color: #493A84; /* Set the title color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+  color: #493A84;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const ProductList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px; /* Increase gap between product cards */
-  max-width: 1000px; /* Set maximum width for the product list */
-  margin: 0 auto; /* Center the product list horizontally */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
 const Loading = styled.div`

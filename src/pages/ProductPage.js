@@ -56,7 +56,6 @@ const AddToCartButton = styled.button`
   }
 `;
 
-// Styled component for h2 element
 const ProductDetailsTitle = styled.h2`
   color: #493A84; /* Set the color */
   font-size: 44px;
@@ -100,7 +99,6 @@ const ProductPage = ({ addToCart }) => {
       <Title>Product Details:</Title>
       {product && (
         <ProductDetails>
-          {/* Apply the styled component here */}
           <ProductDetailsTitle>{product.title}</ProductDetailsTitle>
           <ProductImage src={product.image.url} alt={product.image.alt} />
           <p>{product.description}</p>
