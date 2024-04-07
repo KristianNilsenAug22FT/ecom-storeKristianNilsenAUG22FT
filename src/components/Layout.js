@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <MainContent>{children}</MainContent>
       <Footer />
     </LayoutContainer>
-  );
+  ); 
 }
 
 export default Layout;
