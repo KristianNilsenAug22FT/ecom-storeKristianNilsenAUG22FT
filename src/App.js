@@ -13,12 +13,11 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
-
+    setCart(prevCart => [...prevCart, product]);
   };
-
+  
   const removeFromCart = (productId) => {
-    setCart(cart.filter(item => item.id !== productId));
+    setCart(prevCart => prevCart.filter(item => item.id !== productId));
   };
 
   const clearCart = () => {

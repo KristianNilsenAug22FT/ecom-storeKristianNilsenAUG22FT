@@ -11,6 +11,7 @@ const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 50px;
+  text-align: center;
 `;
 
 const ProductDetails = styled.div`
@@ -43,7 +44,7 @@ const ReviewItem = styled.div`
 
 const AddToCartButton = styled.button`
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #2A2833;
   color: white;
   border: none;
   border-radius: 4px;
@@ -53,6 +54,12 @@ const AddToCartButton = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+`;
+
+// Styled component for h2 element
+const ProductDetailsTitle = styled.h2`
+  color: #493A84; /* Set the color */
+  font-size: 44px;
 `;
 
 const ProductPage = ({ addToCart }) => {
@@ -90,10 +97,11 @@ const ProductPage = ({ addToCart }) => {
 
   return (
     <Container>
-      <Title>Product Details</Title>
+      <Title>Product Details:</Title>
       {product && (
         <ProductDetails>
-          <h2>{product.title}</h2>
+          {/* Apply the styled component here */}
+          <ProductDetailsTitle>{product.title}</ProductDetailsTitle>
           <ProductImage src={product.image.url} alt={product.image.alt} />
           <p>{product.description}</p>
           <Price>
@@ -101,6 +109,7 @@ const ProductPage = ({ addToCart }) => {
           </Price>
           <Price>Price now: ${product.discountedPrice}</Price>
           <Price>You save: ${product.price - product.discountedPrice}</Price>
+          <AddToCartButton onClick={handleAddToCart}>Add to Cart</AddToCartButton>
           <h3>Reviews</h3>
           <ReviewsBox>
             {product.reviews.map(review => (
@@ -111,7 +120,6 @@ const ProductPage = ({ addToCart }) => {
               </ReviewItem>
             ))}
           </ReviewsBox>
-          <AddToCartButton onClick={handleAddToCart}>Add to Cart</AddToCartButton>
         </ProductDetails>
       )}
     </Container>

@@ -4,12 +4,17 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 20px;
+  max-width: 600px; /* Set the maximum width */
+  margin: 0 auto; /* Center the container horizontally */
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 44px;
   margin-bottom: 20px;
   margin-top: 50px;
+  text-align: center;
+  color: #493A84;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const CartItemsContainer = styled.div`
@@ -54,8 +59,8 @@ const TotalLabel = styled.h2`
 const TotalAmount = styled.p`
   font-weight: bold;
   text-decoration: underline;
-
 `;
+
 const CheckoutButton = styled.button`
   background-color: #007bff;
   color: white;
@@ -72,12 +77,14 @@ const CheckoutButton = styled.button`
 
 const EmptyCartMessage = styled.p`
   margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
 `;
 
 const CheckoutPage = ({ products, removeFromCart }) => {
   // Function to calculate total price
   const getTotal = () => {
-    if (!products || products.length === 0) return 0; // Return 0 if products is undefined or empty
+    if (!products || products.length === 0) return 0;
     return products.reduce((total, product) => total + product.discountedPrice, 0);
   };
 

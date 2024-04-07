@@ -6,12 +6,31 @@ const CheckoutSuccessPage = ({ clearCart }) => {
     clearCart();
   }, []);
 
-  return (
-    <div>
-      <h1>Order Successful!</h1>
-      <p>Thank you for your purchase.</p>
+  const containerStyle = {
+    textAlign: 'center',
+    color: '#493A84',
+    marginTop: '100px',
+  };
 
-      <Link to="/">Go back to the frontpage</Link>
+  const headingStyle = {
+    fontSize: '44px',
+    marginBottom: '10px',
+  };
+
+  const paragraphStyle = {
+    fontSize: '18px',
+    marginBottom: '20px',
+  };
+
+  const linkStyle = {
+    color: '#493A84',
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h1 style={headingStyle}>Order Successful!</h1>
+      <p style={paragraphStyle}>Thank you for your purchase.</p>
+      <Link to="/" style={linkStyle}>Go back to the frontpage</Link>
     </div>
   );
 }

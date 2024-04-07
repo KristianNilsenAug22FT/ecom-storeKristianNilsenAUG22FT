@@ -49,7 +49,7 @@ const Price = styled.p`
 `;
 
 const ViewProductButton = styled(Link)`
-  background-color: #007bff;
+  background-color: #2A2833;
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;

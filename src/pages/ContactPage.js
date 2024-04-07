@@ -6,9 +6,12 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 44px;
   margin-bottom: 20px;
-  margin-top:50px;
+  margin-top: 50px;
+  text-align: center;
+  color: #493A84; /* Set the title color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
 `;
 
 const Form = styled.form`

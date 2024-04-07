@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import CartSvg from '../img/cart.svg'; // Import the cart icon
+import CartIcon from './CartIcon'; // Import the CartIcon component
 
 const MobileNavToggle = styled.div`
   display: block;
@@ -10,7 +12,7 @@ const MobileNavToggle = styled.div`
 `;
 
 const Navbar = styled.nav`
-  background-color: #333;
+  background-color: #4930AE;
   overflow: hidden;
   position: fixed;
   width: 100%;
@@ -18,9 +20,8 @@ const Navbar = styled.nav`
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  height: ${(props) => (props.$showMenu ? '158px' : '56px')};
+  height: ${(props) => (props.$showMenu ? '158px' : '60px')};
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  margin-bottom: 50px;
 
   ul {
     list-style-type: none;
@@ -28,15 +29,20 @@ const Navbar = styled.nav`
     padding: 0;
     display: flex;
     align-items: center;
-  }
 
-  li {
-    margin: 0 10px;
-  }
+    li {
+      margin: 0 10px;
+    }
 
-  li a {
-    color: white;
-    text-decoration: none;
+    li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s; /* Add transition for color change */
+      
+      &:hover {
+        color: #ff6600; /* Change color on hover */
+      }
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -60,7 +66,7 @@ const DropdownContent = styled.div.attrs(props => ({
   top: 56px;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #4930AE;
   min-width: 160px;
   z-index: 1;
   padding: 10px;
@@ -70,6 +76,11 @@ const DropdownContent = styled.div.attrs(props => ({
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
+    transition: color 0.3s; /* Add transition for color change */
+
+    &:hover {
+      color: #ff6600; /* Change color on hover */
+    }
   }
 `;
 

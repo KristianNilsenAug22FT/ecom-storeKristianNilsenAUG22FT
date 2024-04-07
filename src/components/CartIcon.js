@@ -4,7 +4,7 @@ import CartSvg from '../img/cart.svg';
 
 const CartIcon = ({ itemCount }) => {
   return (
-    <div className="cart-icon-container" style={{ position: 'absolute', top: '64px', right: '20px', padding: '10px' }}>
+    <div className="cart-icon-container" style={{ position: 'fixed', top: '0px', right: '20px', padding: '10px', zIndex: '1000' }}>
       <Link to="/checkout">
         <div style={{ position: 'relative', display: 'inline-block' }}>
           <img src={CartSvg} alt="Cart" style={{ width: '40px', height: '40px' }} />

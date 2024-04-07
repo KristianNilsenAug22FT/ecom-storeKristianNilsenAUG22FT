@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
 import Product from '../components/Product';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,15 +9,20 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
+  font-size: 44px;
   margin-bottom: 20px;
   margin-top: 50px;
+  text-align: center;
+  color: #493A84; /* Set the title color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
 `;
 
 const ProductList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px; /* Increase gap between product cards */
+  max-width: 1000px; /* Set maximum width for the product list */
+  margin: 0 auto; /* Center the product list horizontally */
 `;
 
 const Loading = styled.div`
@@ -28,6 +32,8 @@ const Loading = styled.div`
 
 const SearchContainer = styled.div`
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 `;
 
 const Input = styled.input`
