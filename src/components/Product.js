@@ -69,6 +69,9 @@ const ProductDetails = styled.div`
   flex-direction: column;
   position: relative;
   padding-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
 `;
 
 
