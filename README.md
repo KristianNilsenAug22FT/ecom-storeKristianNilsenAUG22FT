@@ -1,11 +1,14 @@
 # Getting Started with Create React App
 
 ## Introduction
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This project is an e-commerce store designed with the customer in mind. The platform allows customers to browse and purchase products seamlessly, with features that enhance the shopping experience.
+
+* Product Catalog: Customers can browse a wide variety of products organized in different categories.
+
 
 ### `npm start`
 
