@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# e-COM store
 
 ## Introduction
 This project was bootstrapped with Create React App.
